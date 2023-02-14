@@ -8,7 +8,22 @@ export type ArticleProps = {
 
 const Article = ({ title, text, tags, image, alt }: ArticleProps) => {
   return (
-    <div className="p-5 bg-gray-200 dark:bg-dark-200 sm:rounded-xl sm:shadow-lg flex gap-2 flex-col items-center">
+    <div
+      className="
+          p-5
+          bg-gray-200
+          dark:bg-dark-200
+          sm:rounded-xl
+          sm:shadow-lg
+          flex
+          gap-2
+          flex-col
+          items-center
+          sm:hover:shadow-gray-400
+          sm:hover:dark:shadow-black
+          sm:hover:shadow-lg
+        "
+    >
       <h3 className="text-xl text-alura-200 dark:text-gray-200 font-bold">
         {title}
       </h3>
@@ -16,7 +31,19 @@ const Article = ({ title, text, tags, image, alt }: ArticleProps) => {
       <div className="w-full flex-row justify-end gap-2 pr-5 hidden sm:flex">
         {tags.map((tag) => (
           <span
-            className="bg-alura-100 dark:bg-dark-100 px-4 py-1 rounded-full text-gray-200 font-bold text-xs uppercase"
+            className="
+              bg-alura-100
+              dark:bg-dark-100
+              px-4
+              py-1
+              rounded-full
+              text-gray-200
+              font-bold
+              text-xs
+              uppercase
+              hover:bg-alura-200
+              hover:scale-110
+            "
             key={tag}
           >
             {tag}

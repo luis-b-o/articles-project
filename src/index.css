@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .alura-input {
+    @apply w-full
+    max-w-lg
+    rounded-full
+    py-1
+    pl-5
+    text-dark-200
+    outline-none
+    placeholder:text-xs
+    placeholder:font-bold
+    placeholder:uppercase
+    placeholder:text-gray-400
+    focus:border-2
+    focus:border-alura-200
+    invalid:focus:border-2
+    invalid:focus:border-red-400
+    dark:bg-dark-200
+    dark:text-gray-200
+    placeholder:dark:text-gray-600
+    focus:dark:border-alura-100
+    invalid:focus:dark:border-2
+    invalid:focus:dark:border-red-400;
+  }
+}

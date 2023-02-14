@@ -1,10 +1,16 @@
-import ToggleTheme from "../ToggleTheme/ToggleTheme";
+import ToggleTheme from '../ToggleTheme/ToggleTheme';
 
-const Header = () => {
+interface HeaderProps {
+  user?: { name: string };
+}
+
+const Header = ({ user }: HeaderProps) => {
   return (
-    <div className="flex h-20 bg-alura-200 dark:bg-dark-200 justify-between items-center px-5 sm:rounded-xl sm:m-5">
-      <span className="text-gray-100">Hello User</span>
-      <h1 className="text-gray-100 text-xl">Luis Oliveira Articles</h1>
+    <div className="flex h-20 items-center justify-between bg-alura-200 px-5 dark:bg-dark-200 sm:m-5 sm:rounded-xl">
+      <span className="text-gray-100">Hello {user?.name || 'user'} </span>
+      <h1 className="text-xl text-gray-100 sm:hover:text-2xl">
+        Luis Oliveira Articles
+      </h1>
       <ToggleTheme />
     </div>
   );
